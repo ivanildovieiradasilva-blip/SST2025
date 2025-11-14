@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Imagens de Segurança do Trabalho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .break-inside-avoid {
+      break-inside: avoid;
+    }
+    
+    /* PDF Export Styles */
+    .pdf-export-mode {
+      background-color: white !important;
+      width: 720px !important; /* A4 content width at ~96DPI to force correct wrapping */
+    }
+    .pdf-export-mode .pdf-section {
+      background-color: #f9fafb !important; /* gray-50 */
+      border: 1px solid #e5e7eb !important; /* gray-200 */
+      box-shadow: none !important;
+    }
+    .pdf-export-mode .pdf-text-primary { color: #1f2937 !important; } /* gray-800 */
+    .pdf-export-mode .pdf-text-secondary { color: #4b5563 !important; } /* gray-600 */
+    .pdf-export-mode .pdf-text-accent { color: #047857 !important; } /* emerald-700 */
+    
+    .pdf-export-mode .pdf-header-title { 
+      color: #1f2937 !important;
+      /* Ensures long titles wrap correctly */
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+    .pdf-export-mode .pdf-header-subtitle { color: #059669 !important; }
+    .pdf-export-mode .pdf-final-message-box {
+        background-color: #ecfdf5 !important; /* emerald-50 */
+        border-top-color: #10b981 !important; /* emerald-500 */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "jspdf": "https://aistudiocdn.com/jspdf@^2.5.1",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1"
+  }
+}
+</script>
+</head>
+<body class="bg-emerald-950">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Gerador de DDS - Segurança do Trabalho",
+  "description": "Um aplicativo que gera imagens no estilo Studio Pixel sobre segurança do trabalho usando IA. Insira um prompt sobre uso de EPIs, equipamentos ou outras práticas de segurança para criar uma imagem personalizada.",
+  "requestFramePermissions": []
+}
